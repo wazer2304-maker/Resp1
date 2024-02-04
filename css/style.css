@@ -1,25 +1,25 @@
 h1 {
-    font-size: 10vw;
+    font-size: 10vw; /*mitt-centrerad enkel vit text med storleken 10vw, 10% av bredden på skärmen */
     color: white;
     text-align: center;
 }
 
-body {
+body { /*Inget i body inheritar en standard margin/padding*/
     margin: 0;
     padding: 0;
 }
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
+    width: 100vw; /*100% av bredden på skärmen */
+    height: 100vh; /*100% av höjden på skärmen */
+    display: grid; /*Grid med 2x2 platser, 1fr^2 var, 4 lika stora täckande areor.*/
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
+/*nth-child(1->4) Säger vilken div i containern för divar som ska ha vilken färg.*/
 .container > div:nth-child(1) {
     background: red;
 }
-
 .container > div:nth-child(2) {
     background: blue;
 }
